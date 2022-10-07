@@ -40,6 +40,7 @@ public class DescontosStep {
     public void eu_vejo_o_codigo_de_desconto() {
         String texto_cupom = driver.findElement(By.cssSelector("#cupom > h2 > span")).getText();
 
+        Assert.assertEquals("QAZANDO15OFF", texto_cupom);
         System.out.println(texto_cupom);
     }
 }
