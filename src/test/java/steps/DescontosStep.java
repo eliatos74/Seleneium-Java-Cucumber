@@ -18,7 +18,7 @@ public class DescontosStep {
         driver.get("https://qazando.com.br/curso.html");
         driver.manage().window().maximize();
 
-        Assert.assertEquals("Não acessou a aplicação",true, driver.findElement(By.id("btn-ver-cursos")).isDisplayed());
+        Assert.assertEquals("Não acessou a aplicação!",true, driver.findElement(By.id("btn-ver-cursos")).isDisplayed());
     }
 
     @Quando("^eu preencho meu email$")
