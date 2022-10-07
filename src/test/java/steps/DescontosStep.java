@@ -6,12 +6,9 @@ import cucumber.api.java.pt.Quando;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import runner.RunCucumberTest;
 
-public class DescontosStep {
-
-    WebDriver driver = new ChromeDriver();
+public class DescontosStep extends RunCucumberTest {
 
     @Dado("^que estou no site qazando$")
     public void acessar_site_qazando() throws InterruptedException {
@@ -40,7 +37,6 @@ public class DescontosStep {
     public void eu_vejo_o_codigo_de_desconto() {
         String texto_cupom = driver.findElement(By.cssSelector("#cupom > h2 > span")).getText();
 
-        Assert.assertEquals("QAZANDO15OFF", texto_cupom);
-        System.out.println(texto_cupom);
+        Assert.assertEquals("O cupom esta errado!","QAZANDO15OFF", texto_cupom);
     }
 }
