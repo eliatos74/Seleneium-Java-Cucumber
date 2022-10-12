@@ -2,7 +2,7 @@
 
 Funcionalidade: Receber desconto da QAzando
   Eu como usuário da qazando
-  quero receber um cupom de descnto
+  quero receber um cupom de desconto
   para comprar um curso com valor reduzido
 
   Cenario: Visualizar codigo de desconto

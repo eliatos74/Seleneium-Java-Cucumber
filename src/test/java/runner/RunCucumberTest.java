@@ -12,7 +12,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {},
+        plugin = {"json:target/reports/cucumberReports.json",
+                    "html:target/reports"
+        },
         features = "src/test/resources/features",
         tags = {"~@ignore"},
         glue = {"steps"}
@@ -27,7 +29,6 @@ public class RunCucumberTest {
 
     @AfterClass
     public static  void stop(){
-
         driver.close();
         driver.quit();
     }
